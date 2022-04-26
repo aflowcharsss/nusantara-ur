@@ -4,11 +4,79 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Nusantara Unggul Raya</title>
   </head>
-  <body>
-    <div id="app">
-      <h3 class="text-3xl font-bold">Hello World!</h3>
+  <body class="body">
+    <div id="app" class="nusantara">
+      <!-- Header -->
+      <header class="header">
+        <!-- Navbar -->
+        <nav class="navigation">
+          <!-- Logo -->
+          <div class="logo">
+            <img
+              src="./src/assets/icons/nur-logo.svg"
+              alt="Nusantara Unggul Raya"
+            />
+          </div>
+
+          <!-- Menu -->
+          <ul class="menu">
+            <li class="item">
+              <a class="link" href="#">Rumah</a>
+            </li>
+            <li class="item">
+              <a class="link" href="#">Produk</a>
+            </li>
+            <li class="item">
+              <a class="link" href="#">Tentang</a>
+            </li>
+            <li class="item">
+              <a class="link" href="#">Kontak</a>
+            </li>
+          </ul>
+
+          <!-- Login -->
+          <div class="login">
+            <a class="cta fill" href="#">Login</a>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Hero -->
+      <section class="hero">
+        <div class="wrapper">
+          <div class="heading">
+            <h3 class="name">Nusantara Unggul Raya</h3>
+            <h1 class="main">
+              <span class="text">
+                Solusi Bagi Kebutuhan <span>Bisnis</span> Anda Dengan Software
+                Konsultasi Accounting dan Layanan Pajak
+              </span>
+
+              <div class="underline"></div>
+            </h1>
+            <a class="cta fill" href="#"> Get Started </a>
+          </div>
+
+          <div class="feature">
+            <div class="card">
+              <h5 class="heading">SQ</h5>
+              <p class="para">Sales Quotation</p>
+            </div>
+
+            <div class="card">
+              <h5 class="heading">DO</h5>
+              <p class="para">Delivery Order</p>
+            </div>
+
+            <div class="card">
+              <h5 class="heading">SI</h5>
+              <p class="para">Sales Invoice</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
     <script type="module" src="/main.js"></script>
   </body>

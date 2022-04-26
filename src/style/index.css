@@ -12,30 +12,62 @@
 }
 
 /* Components */
-.cta.fill {
+.comp.cta.fill {
   @apply bg-gradient-to-tr from-yellow-500 via-yellow-400  to-yellow-300 rounded-full py-3 px-6 text-slate-800 font-semibold;
+}
+
+.comp.blurred {
+  @apply bg-gradient-to-tr from-yellow-600 to-yellow-200 w-96 h-96 rounded-full blur-3xl opacity-10 absolute;
+}
+
+.comp.blurred.left {
+  @apply -top-20 -left-20;
+}
+
+.comp.blurred.right {
+  @apply -top-20 -right-20;
+}
+
+.comp.heading {
+  @apply text-center mb-16;
+}
+.comp.heading .content {
+  @apply mb-2 text-2xl text-slate-800 font-extrabold;
 }
 
 /* Header */
 .header {
-  @apply container mx-auto text-sm font-semibold text-slate-800;
+  @apply text-sm font-semibold text-slate-800 relative;
 }
 
 .header .navigation {
-  @apply flex items-center justify-between py-4;
+  @apply flex items-center justify-between py-4 container mx-auto;
 }
 
+.header .pattern {
+  @apply absolute top-0 left-0 w-[20rem] h-[20rem] opacity-75;
+}
+
+/* Header - Menu */
 .header .navigation .menu {
   @apply flex items-center space-x-8;
 }
 
+.header .navigation .menu .item .link.active {
+  @apply text-yellow-500;
+}
+
 /* Hero */
 .hero {
-  @apply container mx-auto;
+  @apply container mx-auto relative;
 }
 
 .hero .wrapper {
-  @apply min-h-screen flex flex-col items-center justify-center space-y-24;
+  @apply relative z-20 min-h-screen flex flex-col items-center justify-center space-y-24;
+}
+
+.hero .map {
+  @apply absolute z-10 top-48 left-1/2 transform -translate-x-1/2 w-full h-full opacity-90;
 }
 
 /* Hero - Heading */
@@ -44,7 +76,7 @@
 }
 
 .hero .heading .name {
-  @apply mb-4 uppercase text-yellow-400 text-sm font-bold bg-gradient-to-tr from-slate-100 to-slate-50 tracking-wider shadow-sm px-4 py-2 rounded-full;
+  @apply mb-4 uppercase text-yellow-500 text-sm font-bold bg-gradient-to-tr from-slate-100 to-slate-50 tracking-wider shadow-sm px-4 py-2 rounded-full;
 }
 
 .hero .heading .main {
@@ -56,11 +88,11 @@
 }
 
 .hero .heading .main .text span {
-  @apply text-yellow-400 italic;
+  @apply text-yellow-500 italic;
 }
 
 .hero .heading .main .underline {
-  @apply h-1 w-28 bg-yellow-400 absolute top-10 left-16 z-0;
+  @apply h-1 w-28 bg-gradient-to-tr from-yellow-500 to-yellow-300 absolute top-10 left-16 z-0;
 }
 
 .hero .heading .cta {

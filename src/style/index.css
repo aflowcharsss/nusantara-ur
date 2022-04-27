@@ -8,12 +8,24 @@
 
 /* Base */
 .nusantara {
-  @apply bg-slate-50 text-slate-600 min-h-screen text-base font-inter tracking-wide;
+  @apply bg-slate-50 text-slate-600 min-h-screen text-sm font-inter tracking-wide;
+}
+
+.grad {
+  @apply bg-gradient-to-tr from-yellow-400 to-yellow-200;
 }
 
 /* Components */
+.comp.cta {
+  @apply rounded-full py-3 px-6 text-slate-800 font-semibold;
+}
+
 .comp.cta.fill {
-  @apply bg-gradient-to-tr from-yellow-500 via-yellow-400  to-yellow-300 rounded-full py-3 px-6 text-slate-800 font-semibold;
+  @apply grad border-[1.5px] border-slate-50;
+}
+
+.comp.cta.outl {
+  @apply border-[1.5px] border-slate-800;
 }
 
 .comp.blurred {
@@ -92,7 +104,7 @@
 }
 
 .hero .heading .main .underline {
-  @apply h-1 w-28 bg-gradient-to-tr from-yellow-500 to-yellow-300 absolute top-10 left-16 z-0;
+  @apply h-1 w-28 bg-gradient-to-tr grad absolute top-10 left-16 z-0;
 }
 
 .hero .heading .cta {
@@ -101,7 +113,7 @@
 
 /* Hero - Feature */
 .hero .feature {
-  @apply flex items-center justify-center space-x-16;
+  @apply flex items-center justify-center space-x-8;
 }
 
 .hero .feature .card {
@@ -114,4 +126,33 @@
 
 .hero .feature .card .para {
   @apply text-center text-xs font-semibold w-3/5;
+}
+
+/* Benefit */
+.benefit {
+  @apply min-h-screen py-24;
+}
+
+.benefit .feature {
+  @apply container mx-auto grid grid-cols-3 gap-x-8;
+}
+
+.benefit .feature .card {
+  @apply flex items-center justify-center flex-col;
+}
+
+.benefit .feature .card .icon {
+  @apply p-6 mb-8 border-[0.25px] rounded-2xl shadow-md hover:shadow-none bg-slate-50 hover:bg-yellow-300 hover:border-transparent hover:cursor-pointer hover:transition-all hover:duration-500 hover:ease-in transition-all ease-out duration-300;
+}
+
+.benefit .feature .card .icon .image {
+  @apply w-12 h-12;
+}
+
+.benefit .feature .card .text {
+  @apply text-center;
+}
+
+.benefit .feature .card .text .title {
+  @apply text-slate-800 text-lg font-extrabold pb-2;
 }

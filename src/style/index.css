@@ -37,7 +37,7 @@
 }
 
 .comp.blurred.right {
-  @apply -top-20 -right-20;
+  @apply -bottom-56 -right-0;
 }
 
 .comp.heading {
@@ -130,7 +130,7 @@
 
 /* Benefit */
 .benefit {
-  @apply min-h-screen py-24;
+  @apply min-h-screen py-24 relative;
 }
 
 .benefit .feature {
@@ -155,4 +155,116 @@
 
 .benefit .feature .card .text .title {
   @apply text-slate-800 text-lg font-extrabold pb-2;
+}
+
+/* Introduction */
+.intro {
+  @apply py-24;
+}
+
+.intro .cta {
+  @apply mb-4 flex items-center justify-center space-x-4;
+}
+
+.intro .cta .button {
+  @apply w-40 text-center;
+}
+
+.intro .product {
+  @apply border-[0.25px] border-slate-200;
+}
+
+.intro .product .wrapper {
+  @apply container mx-auto grid grid-cols-12 gap-x-8;
+}
+
+/* Introduction - Testimony */
+.intro .product .wrapper .testimony {
+  @apply col-span-5 py-16;
+}
+
+.intro .product .wrapper .testimony .image {
+  @apply w-full h-96;
+}
+
+.intro .product .wrapper .testimony .photo {
+  @apply w-full h-full object-cover object-right-bottom rounded-lg;
+}
+
+.intro .product .wrapper .testimony .text .testi {
+  @apply py-8;
+}
+
+.intro .product .wrapper .testimony .text .author {
+  @apply text-slate-800 font-semibold;
+}
+
+/* Introduction - Divider */
+.intro .product .wrapper .divider {
+  @apply col-span-1 w-[0.25px] bg-slate-200 h-full justify-self-center;
+}
+
+/* Introduction - Content */
+.intro .product .wrapper .content {
+  @apply col-span-6 py-16 space-y-8;
+}
+
+.intro .product .wrapper .content .description .heading {
+  @apply mb-3 text-base font-extrabold text-slate-800;
+}
+
+.intro .product .wrapper .content .type .heading {
+  @apply mb-4 text-base font-semibold text-slate-800;
+}
+
+.intro .product .wrapper .content .type .wrapper {
+  @apply grid grid-cols-12 gap-x-8;
+}
+
+.intro .product .wrapper .content .type .wrapper .card {
+  @apply col-span-4 flex flex-col items-center space-y-2;
+}
+
+.intro .product .wrapper .content .type .wrapper .card .icon img {
+  @apply w-10 h-10;
+}
+
+.intro .product .wrapper .content .type .wrapper .card .text {
+  @apply text-slate-800;
+}
+
+.intro .product .wrapper .content .feature .heading {
+  @apply mb-4 text-base font-semibold text-slate-800;
+}
+
+.intro .product .wrapper .content .feature .wrapper {
+  @apply mb-12 grid grid-cols-12 gap-8;
+}
+
+.intro .product .wrapper .content .feature .wrapper .card {
+  @apply col-span-4 flex flex-col items-center justify-center space-y-2;
+}
+
+.intro .product .wrapper .content .feature .wrapper .card .icon {
+  @apply w-9 h-9;
+}
+
+.intro .product .wrapper .content .feature .wrapper .card img {
+  @apply w-full h-full object-cover;
+}
+
+.intro .product .wrapper .content .feature .wrapper .desc {
+  @apply text-xs text-center;
+}
+
+.intro .product .wrapper .content .feature .cta {
+  @apply w-full;
+}
+
+.intro .product .wrapper .content .feature .cta .icon {
+  @apply w-5 h-5;
+}
+
+.intro .product .wrapper .content .feature .cta .button {
+  @apply w-full flex items-center;
 }

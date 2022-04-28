@@ -75,7 +75,7 @@
 }
 
 .hero .wrapper {
-  @apply relative z-20 min-h-screen flex flex-col items-center justify-center space-y-24;
+  @apply relative z-20 min-h-screen flex flex-col items-center justify-center space-y-8;
 }
 
 .hero .map {
@@ -267,4 +267,41 @@
 
 .intro .product .wrapper .content .feature .cta .button {
   @apply w-full flex items-center;
+}
+
+/* Feature */
+.feature {
+  @apply pb-24;
+}
+
+.feature .wrapper {
+  @apply container mx-auto grid grid-cols-12 gap-x-8 place-items-center;
+}
+
+.feature .wrapper .menu {
+  @apply col-span-3 space-y-4;
+}
+
+.feature .wrapper .menu .list {
+  @apply py-3 px-4 hover:bg-gradient-to-tr hover:from-yellow-400 hover:to-yellow-200 rounded-lg;
+}
+
+.feature .wrapper .menu .list .active {
+  @apply bg-slate-100 shadow-sm;
+}
+
+.feature .wrapper .image {
+  @apply col-span-5;
+}
+
+.feature .wrapper .image .photo {
+  @apply w-80 h-auto;
+}
+
+.feature .wrapper .description {
+  @apply col-span-4;
+}
+
+.feature .wrapper .description .heading {
+  @apply mb-4 text-base font-bold text-slate-800;
 }

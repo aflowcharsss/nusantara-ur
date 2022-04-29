@@ -314,7 +314,7 @@
 
 /* Pricing */
 .pricing {
-  @apply py-32 relative;
+  @apply pt-32 pb-24 relative;
 }
 
 .pricing .cta {
@@ -330,7 +330,7 @@
 }
 
 .pricing .wrapper .card {
-  @apply col-span-4 space-y-5 px-8 flex flex-col items-center border-[0.25px] rounded-2xl py-16 shadow-md;
+  @apply col-span-4 space-y-5 px-8 flex flex-col items-center border-[0.25px] rounded-3xl py-16 shadow-md;
 }
 
 .pricing .wrapper .best {
@@ -387,4 +387,74 @@
 
 .pricing .wrapper .card .module .nb {
   @apply text-xs italic text-center;
+}
+
+/* FAQ */
+.faq {
+  @apply py-24 container mx-auto;
+}
+
+.faq .accordion {
+  @apply grid grid-cols-12 gap-x-8;
+}
+
+.faq .accordion .wrapper {
+  @apply col-start-2 col-end-12 py-0;
+}
+
+.faq .accordion .wrapper .item {
+  @apply grid grid-cols-12 gap-y-4 py-6 border-b-[0.25px] border-slate-300 place-items-center;
+}
+
+.faq .accordion .wrapper .item .text {
+  @apply text-slate-800 font-semibold col-span-10 place-self-start text-base leading-relaxed;
+}
+
+.faq .accordion .wrapper .item .icon {
+  @apply col-span-2 place-self-end;
+}
+
+.faq .accordion .wrapper .item .icon.hide {
+  @apply transform rotate-180;
+}
+
+.faq .accordion .wrapper .item .content {
+  @apply col-span-11;
+}
+
+/* Footer */
+.footer {
+  @apply container mx-auto py-24 grid grid-cols-12 gap-x-8;
+}
+
+.footer .company {
+  @apply mb-12 flex flex-col items-center space-y-4 col-start-3 col-end-11;
+}
+
+.footer .company .logo {
+  @apply w-20 h-20 mb-2;
+}
+
+.footer .company .name {
+  @apply font-extrabold text-lg text-slate-800 uppercase;
+}
+
+.footer .company .desc {
+  @apply text-center;
+}
+
+.footer .menu {
+  @apply mb-12 col-start-3 col-end-11 flex items-center justify-between;
+}
+
+.footer .menu .item {
+  @apply font-semibold text-slate-800;
+}
+
+.footer .socmed {
+  @apply mb-8 col-start-3 col-end-11 flex items-center justify-center space-x-8;
+}
+
+.footer .copyright {
+  @apply col-start-3 col-end-11 text-center;
 }

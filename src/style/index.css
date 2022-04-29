@@ -17,7 +17,7 @@
 
 /* Components */
 .comp.cta {
-  @apply rounded-full py-3 px-6 text-slate-800 font-semibold;
+  @apply rounded-full py-3 px-6 text-slate-800 font-semibold text-sm;
 }
 
 .comp.cta.fill {
@@ -28,12 +28,29 @@
   @apply border-[1.5px] border-slate-800;
 }
 
+.comp.cta.full {
+  @apply w-full;
+}
+
+.comp.cta.outl.cta.button.with {
+  @apply w-full flex items-center space-x-2;
+}
+
+.comp.cta.outl.cta.button.with img.icon,
+.comp.cta.fill.cta.button.with img.icon {
+  @apply w-[18px] h-[18px];
+}
+
 .comp.blurred {
   @apply bg-gradient-to-tr from-yellow-600 to-yellow-200 w-96 h-96 rounded-full blur-3xl opacity-10 absolute;
 }
 
 .comp.blurred.left {
-  @apply -top-20 -left-20;
+  @apply -top-20 -left-16;
+}
+
+.comp.blurred.pricing {
+  @apply -top-20 -left-20 z-10 w-[28rem] h-[28rem];
 }
 
 .comp.blurred.right {
@@ -41,8 +58,9 @@
 }
 
 .comp.heading {
-  @apply text-center mb-16;
+  @apply text-center mb-8;
 }
+
 .comp.heading .content {
   @apply mb-2 text-2xl text-slate-800 font-extrabold;
 }
@@ -257,18 +275,6 @@
   @apply text-xs text-center;
 }
 
-.intro .product .wrapper .content .feature .cta {
-  @apply w-full;
-}
-
-.intro .product .wrapper .content .feature .cta .icon {
-  @apply w-5 h-5;
-}
-
-.intro .product .wrapper .content .feature .cta .button {
-  @apply w-full flex items-center;
-}
-
 /* Feature */
 .feature {
   @apply pb-24;
@@ -304,4 +310,81 @@
 
 .feature .wrapper .description .heading {
   @apply mb-4 text-base font-bold text-slate-800;
+}
+
+/* Pricing */
+.pricing {
+  @apply py-32 relative;
+}
+
+.pricing .cta {
+  @apply mb-4 relative z-20 flex items-center justify-center space-x-4;
+}
+
+.pricing .cta .comp.cta.button.heading {
+  @apply w-40;
+}
+
+.pricing .wrapper {
+  @apply container relative z-20 mx-auto grid grid-cols-12 gap-x-8 py-20;
+}
+
+.pricing .wrapper .card {
+  @apply col-span-4 space-y-5 px-8 flex flex-col items-center border-[0.25px] rounded-2xl py-16 shadow-md;
+}
+
+.pricing .wrapper .best {
+  @apply col-span-4 relative;
+}
+
+.pricing .wrapper .best .offer {
+  @apply absolute z-0 inset-0 -top-12 bg-yellow-400 w-full py-4 rounded-3xl text-center;
+}
+
+.pricing .wrapper .best .offer .text {
+  @apply font-semibold text-slate-50;
+}
+
+.pricing .wrapper .card.best {
+  @apply bg-slate-50 relative z-10 border-2 border-yellow-400 shadow-none;
+}
+
+.pricing .wrapper .card .heading {
+  @apply flex flex-col items-center;
+}
+
+.pricing .wrapper .card .heading .main {
+  @apply font-bold text-slate-800 text-lg;
+}
+
+.pricing .wrapper .card .heading .icon {
+  @apply w-14 h-14 mt-2 mb-4;
+}
+
+.pricing .wrapper .card .heading .icon img {
+  @apply w-full h-full;
+}
+
+.pricing .wrapper .card .module {
+  @apply space-y-4;
+}
+
+.pricing .wrapper .card .module .heading-card .main {
+  @apply font-semibold text-slate-800 text-sm mb-3;
+}
+
+.pricing .wrapper .card .module .list {
+  @apply grid grid-cols-12 gap-x-6 gap-y-5;
+}
+
+.pricing .wrapper .card .module .list .item {
+  @apply col-span-6 flex flex-row items-center space-x-2;
+}
+
+.pricing .wrapper .card .module .list .item .icon img {
+  @apply w-[18px] h-[18px];
+}
+
+.pricing .wrapper .card .module .nb {
+  @apply text-xs italic text-center;
 }

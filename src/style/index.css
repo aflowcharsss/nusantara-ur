@@ -412,7 +412,7 @@
 
 /* FAQ */
 .faq {
-  @apply container mx-auto pt-8 pb-24;
+  @apply container mx-auto py-8;
 }
 
 .faq .accordion {
@@ -445,7 +445,7 @@
 
 /* Contact Us */
 .contact {
-  @apply container mx-auto py-16;
+  @apply container mx-auto pt-8 pb-16;
 }
 
 .contact .form .wrapper {

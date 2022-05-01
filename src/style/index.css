@@ -17,7 +17,7 @@
 
 /* Components */
 .comp.cta {
-  @apply rounded-full py-3 px-6 text-sm font-semibold text-slate-800;
+  @apply rounded-full py-3 px-6 text-xs font-semibold text-slate-800 sm:text-sm;
 }
 
 .comp.cta.fill {
@@ -43,7 +43,7 @@
 }
 
 .comp.blurred {
-  @apply absolute h-96 w-96 rounded-full bg-gradient-to-tr from-yellow-600 to-yellow-200 opacity-10 blur-3xl;
+  @apply absolute h-96 w-96 rounded-full bg-gradient-to-tr from-yellow-600 to-yellow-200 opacity-5 blur-3xl sm:opacity-10;
 }
 
 .comp.blurred.left {
@@ -63,20 +63,24 @@
 }
 
 .comp.heading .content {
-  @apply mb-2 text-2xl font-extrabold text-slate-800;
+  @apply mb-2 text-lg font-extrabold text-slate-800 lg:text-2xl;
 }
 
 /* Header */
 .header {
-  @apply relative text-sm font-semibold text-slate-800;
+  @apply relative px-4 text-sm font-semibold text-slate-800 sm:px-0;
 }
 
 .header .navigation {
-  @apply container relative mx-auto grid grid-cols-12 place-items-center gap-x-8 py-4;
+  @apply container relative mx-auto flex grid-cols-12 place-items-center items-center justify-between gap-x-8 py-4 md:grid;
 }
 
 .header .navigation .logo {
   @apply col-span-3 place-self-start;
+}
+
+.header .navigation .logo img {
+  @apply h-10 w-10;
 }
 
 .header .navigation .menu {
@@ -93,7 +97,7 @@
 
 /* Header - Menu */
 .header .navigation .menu {
-  @apply flex items-center space-x-12;
+  @apply hidden items-center space-x-12 sm:flex;
 }
 
 .header .navigation .menu .item .link.active {
@@ -106,7 +110,7 @@
 }
 
 .hero .wrapper {
-  @apply relative z-20 flex min-h-screen flex-col items-center justify-center space-y-16;
+  @apply relative z-20 flex flex-col items-center justify-center space-y-8 sm:min-h-screen sm:space-y-16;
 }
 
 .hero .map {
@@ -119,7 +123,7 @@
 }
 
 .hero .heading .name {
-  @apply mb-4 rounded-full bg-gradient-to-tr from-slate-100 to-slate-50 px-4 py-2 text-sm font-bold uppercase tracking-wider text-yellow-500 shadow-sm;
+  @apply mb-4 rounded-full bg-gradient-to-tr from-slate-100 to-slate-50 px-4 py-2 text-[10px] font-bold uppercase tracking-wider text-yellow-500 shadow-sm sm:text-sm;
 }
 
 .hero .heading .main {
@@ -127,7 +131,7 @@
 }
 
 .hero .heading .main .text {
-  @apply relative z-10 text-4xl font-extrabold leading-normal  tracking-wide text-slate-800;
+  @apply relative z-10 text-xl font-extrabold leading-normal tracking-wide  text-slate-800 sm:text-4xl;
 }
 
 .hero .heading .main .text span {
@@ -135,7 +139,7 @@
 }
 
 .hero .heading .main .underline {
-  @apply grad absolute top-10 left-16 z-0 h-1 w-28 bg-gradient-to-tr;
+  @apply grad absolute top-5 left-1 z-0 h-1 w-16 bg-gradient-to-tr sm:top-10 sm:left-16 sm:w-28;
 }
 
 .hero .heading .cta {
@@ -144,19 +148,19 @@
 
 /* Hero - Feature */
 .hero .h-feature {
-  @apply flex items-center justify-center space-x-8;
+  @apply flex items-center justify-center space-x-3 sm:flex-row sm:space-x-8;
 }
 
 .hero .h-feature .card {
-  @apply flex h-32 w-32 flex-col items-center justify-center rounded-lg border-[0.5px] border-slate-200 bg-slate-100 bg-opacity-30 text-center shadow-sm;
+  @apply flex h-20 w-20 flex-col items-center justify-center rounded-lg border-[0.5px] border-slate-200 bg-slate-100 bg-opacity-30 text-center shadow-sm sm:h-32 sm:w-32;
 }
 
 .hero .h-feature .card .heading {
-  @apply text-xl font-extrabold text-slate-800;
+  @apply pb-1 text-sm font-extrabold text-slate-800 sm:text-xl;
 }
 
 .hero .h-feature .card .para {
-  @apply w-3/5 text-center text-xs font-semibold;
+  @apply w-3/5 text-center text-[10px] font-semibold leading-tight sm:text-xs;
 }
 
 /* Benefit */

@@ -8,7 +8,7 @@
 
 /* Base */
 .nusantara {
-  @apply bg-slate-50 text-slate-600 min-h-screen text-sm font-inter tracking-wide;
+  @apply min-h-screen bg-slate-50 font-inter text-sm tracking-wide text-slate-600;
 }
 
 .grad {
@@ -17,11 +17,11 @@
 
 /* Components */
 .comp.cta {
-  @apply rounded-full py-3 px-6 text-slate-800 font-semibold text-sm;
+  @apply rounded-full py-3 px-6 text-sm font-semibold text-slate-800;
 }
 
 .comp.cta.fill {
-  @apply grad border-[1.5px] border-slate-50;
+  @apply grad;
 }
 
 .comp.cta.outl {
@@ -32,17 +32,18 @@
   @apply w-full;
 }
 
-.comp.cta.outl.cta.button.with {
-  @apply w-full flex items-center space-x-2;
+.comp.cta.outl.cta.button.with,
+.comp.cta.fill.cta.button.with {
+  @apply flex w-full items-center space-x-2;
 }
 
 .comp.cta.outl.cta.button.with img.icon,
 .comp.cta.fill.cta.button.with img.icon {
-  @apply w-[18px] h-[18px];
+  @apply h-[18px] w-[18px];
 }
 
 .comp.blurred {
-  @apply bg-gradient-to-tr from-yellow-600 to-yellow-200 w-96 h-96 rounded-full blur-3xl opacity-10 absolute;
+  @apply absolute h-96 w-96 rounded-full bg-gradient-to-tr from-yellow-600 to-yellow-200 opacity-10 blur-3xl;
 }
 
 .comp.blurred.left {
@@ -50,7 +51,7 @@
 }
 
 .comp.blurred.pricing {
-  @apply -top-20 -left-20 z-10 w-[28rem] h-[28rem];
+  @apply -top-20 -left-20 z-10 h-[28rem] w-[28rem];
 }
 
 .comp.blurred.right {
@@ -58,29 +59,41 @@
 }
 
 .comp.heading {
-  @apply text-center mb-8;
+  @apply mb-8 text-center;
 }
 
 .comp.heading .content {
-  @apply mb-2 text-2xl text-slate-800 font-extrabold;
+  @apply mb-2 text-2xl font-extrabold text-slate-800;
 }
 
 /* Header */
 .header {
-  @apply text-sm font-semibold text-slate-800 relative;
+  @apply relative text-sm font-semibold text-slate-800;
 }
 
 .header .navigation {
-  @apply flex items-center justify-between py-4 container mx-auto;
+  @apply container relative mx-auto grid grid-cols-12 place-items-center gap-x-8 py-4;
+}
+
+.header .navigation .logo {
+  @apply col-span-3 place-self-start;
+}
+
+.header .navigation .menu {
+  @apply col-span-6;
+}
+
+.header .navigation .login {
+  @apply col-span-3 place-self-end self-center;
 }
 
 .header .pattern {
-  @apply absolute top-0 left-0 w-[20rem] h-[20rem] opacity-75;
+  @apply absolute top-0 left-0 h-[20rem] w-[20rem] opacity-75;
 }
 
 /* Header - Menu */
 .header .navigation .menu {
-  @apply flex items-center space-x-8;
+  @apply flex items-center space-x-12;
 }
 
 .header .navigation .menu .item .link.active {
@@ -89,40 +102,40 @@
 
 /* Hero */
 .hero {
-  @apply container mx-auto relative;
+  @apply container relative mx-auto;
 }
 
 .hero .wrapper {
-  @apply relative z-20 min-h-screen flex flex-col items-center justify-center space-y-8;
+  @apply relative z-20 flex min-h-screen flex-col items-center justify-center space-y-16;
 }
 
 .hero .map {
-  @apply absolute z-10 top-48 left-1/2 transform -translate-x-1/2 w-full h-full opacity-90;
+  @apply absolute top-48 left-1/2 z-10 h-full w-full -translate-x-1/2 transform opacity-90;
 }
 
 /* Hero - Heading */
 .hero .heading {
-  @apply flex items-center justify-center flex-col;
+  @apply flex flex-col items-center justify-center;
 }
 
 .hero .heading .name {
-  @apply mb-4 uppercase text-yellow-500 text-sm font-bold bg-gradient-to-tr from-slate-100 to-slate-50 tracking-wider shadow-sm px-4 py-2 rounded-full;
+  @apply mb-4 rounded-full bg-gradient-to-tr from-slate-100 to-slate-50 px-4 py-2 text-sm font-bold uppercase tracking-wider text-yellow-500 shadow-sm;
 }
 
 .hero .heading .main {
-  @apply mb-10 relative w-9/12 text-center;
+  @apply relative mb-10 w-9/12 text-center;
 }
 
 .hero .heading .main .text {
-  @apply relative z-10 text-4xl text-slate-800 font-extrabold  leading-normal tracking-wide;
+  @apply relative z-10 text-4xl font-extrabold leading-normal  tracking-wide text-slate-800;
 }
 
 .hero .heading .main .text span {
-  @apply text-yellow-500 italic;
+  @apply italic text-yellow-500;
 }
 
 .hero .heading .main .underline {
-  @apply h-1 w-28 bg-gradient-to-tr grad absolute top-10 left-16 z-0;
+  @apply grad absolute top-10 left-16 z-0 h-1 w-28 bg-gradient-to-tr;
 }
 
 .hero .heading .cta {
@@ -130,54 +143,54 @@
 }
 
 /* Hero - Feature */
-.hero .feature {
+.hero .h-feature {
   @apply flex items-center justify-center space-x-8;
 }
 
-.hero .feature .card {
-  @apply bg-slate-100 bg-opacity-30 text-center flex flex-col items-center justify-center rounded-lg w-32 h-32 shadow-sm border-[0.5px] border-slate-200;
+.hero .h-feature .card {
+  @apply flex h-32 w-32 flex-col items-center justify-center rounded-lg border-[0.5px] border-slate-200 bg-slate-100 bg-opacity-30 text-center shadow-sm;
 }
 
-.hero .feature .card .heading {
+.hero .h-feature .card .heading {
   @apply text-xl font-extrabold text-slate-800;
 }
 
-.hero .feature .card .para {
-  @apply text-center text-xs font-semibold w-3/5;
+.hero .h-feature .card .para {
+  @apply w-3/5 text-center text-xs font-semibold;
 }
 
 /* Benefit */
 .benefit {
-  @apply min-h-screen py-24 relative;
+  @apply relative py-16;
 }
 
-.benefit .feature {
+.benefit .b-feature {
   @apply container mx-auto grid grid-cols-3 gap-x-8;
 }
 
-.benefit .feature .card {
-  @apply flex items-center justify-center flex-col;
+.benefit .b-feature .card {
+  @apply flex flex-col items-center justify-center py-6;
 }
 
-.benefit .feature .card .icon {
-  @apply p-6 mb-8 border-[0.25px] rounded-2xl shadow-md hover:shadow-none bg-slate-50 hover:bg-yellow-300 hover:border-transparent hover:cursor-pointer hover:transition-all hover:duration-500 hover:ease-in transition-all ease-out duration-300;
+.benefit .b-feature .card .icon {
+  @apply mb-8 rounded-2xl border-[0.25px] bg-slate-50 p-6 shadow-md transition-all duration-300 ease-out hover:cursor-pointer hover:border-transparent hover:bg-yellow-300 hover:shadow-none hover:transition-all hover:duration-500 hover:ease-in;
 }
 
-.benefit .feature .card .icon .image {
-  @apply w-12 h-12;
+.benefit .b-feature .card .icon .image {
+  @apply h-12 w-12;
 }
 
-.benefit .feature .card .text {
+.benefit .b-feature .card .text {
   @apply text-center;
 }
 
-.benefit .feature .card .text .title {
-  @apply text-slate-800 text-lg font-extrabold pb-2;
+.benefit .b-feature .card .text .title {
+  @apply pb-2 text-lg font-extrabold text-slate-800;
 }
 
 /* Introduction */
 .intro {
-  @apply py-24;
+  @apply py-8;
 }
 
 .intro .cta {
@@ -202,11 +215,11 @@
 }
 
 .intro .product .wrapper .testimony .image {
-  @apply w-full h-96;
+  @apply h-96 w-full;
 }
 
 .intro .product .wrapper .testimony .photo {
-  @apply w-full h-full object-cover object-right-bottom rounded-lg;
+  @apply h-full w-full rounded-lg object-cover object-right-bottom;
 }
 
 .intro .product .wrapper .testimony .text .testi {
@@ -214,17 +227,17 @@
 }
 
 .intro .product .wrapper .testimony .text .author {
-  @apply text-slate-800 font-semibold;
+  @apply font-semibold text-slate-800;
 }
 
 /* Introduction - Divider */
 .intro .product .wrapper .divider {
-  @apply col-span-1 w-[0.25px] bg-slate-200 h-full justify-self-center;
+  @apply col-span-1 h-full w-[0.25px] justify-self-center bg-slate-200;
 }
 
 /* Introduction - Content */
 .intro .product .wrapper .content {
-  @apply col-span-6 py-16 space-y-8;
+  @apply col-span-6 space-y-8 py-16;
 }
 
 .intro .product .wrapper .content .description .heading {
@@ -244,44 +257,44 @@
 }
 
 .intro .product .wrapper .content .type .wrapper .card .icon img {
-  @apply w-10 h-10;
+  @apply h-10 w-10;
 }
 
 .intro .product .wrapper .content .type .wrapper .card .text {
   @apply text-slate-800;
 }
 
-.intro .product .wrapper .content .feature .heading {
+.intro .product .wrapper .content .feature-product .heading {
   @apply mb-4 text-base font-semibold text-slate-800;
 }
 
-.intro .product .wrapper .content .feature .wrapper {
+.intro .product .wrapper .content .feature-product .wrapper {
   @apply mb-12 grid grid-cols-12 gap-8;
 }
 
-.intro .product .wrapper .content .feature .wrapper .card {
+.intro .product .wrapper .content .feature-product .wrapper .card {
   @apply col-span-4 flex flex-col items-center justify-center space-y-2;
 }
 
-.intro .product .wrapper .content .feature .wrapper .card .icon {
-  @apply w-9 h-9;
+.intro .product .wrapper .content .feature-product .wrapper .card .icon {
+  @apply h-9 w-9;
 }
 
-.intro .product .wrapper .content .feature .wrapper .card img {
-  @apply w-full h-full object-cover;
+.intro .product .wrapper .content .feature-product .wrapper .card img {
+  @apply h-full w-full object-cover;
 }
 
-.intro .product .wrapper .content .feature .wrapper .desc {
-  @apply text-xs text-center;
+.intro .product .wrapper .content .feature-product .wrapper .desc {
+  @apply text-center text-xs;
 }
 
 /* Feature */
 .feature {
-  @apply pb-24;
+  @apply py-8;
 }
 
 .feature .wrapper {
-  @apply container mx-auto grid grid-cols-12 gap-x-8 place-items-center;
+  @apply container mx-auto grid grid-cols-12 place-items-center gap-x-8;
 }
 
 .feature .wrapper .menu {
@@ -289,7 +302,7 @@
 }
 
 .feature .wrapper .menu .list {
-  @apply py-3 px-4 hover:bg-gradient-to-tr hover:from-yellow-400 hover:to-yellow-200 rounded-lg;
+  @apply rounded-lg py-3 px-4 hover:bg-gradient-to-tr hover:from-yellow-400 hover:to-yellow-200;
 }
 
 .feature .wrapper .menu .list .active {
@@ -301,7 +314,7 @@
 }
 
 .feature .wrapper .image .photo {
-  @apply w-80 h-auto;
+  @apply h-auto w-80;
 }
 
 .feature .wrapper .description {
@@ -314,11 +327,11 @@
 
 /* Pricing */
 .pricing {
-  @apply pt-32 pb-24 relative;
+  @apply relative pt-32 pb-8;
 }
 
 .pricing .cta {
-  @apply mb-4 relative z-20 flex items-center justify-center space-x-4;
+  @apply relative z-20 mb-4 flex items-center justify-center space-x-4;
 }
 
 .pricing .cta .comp.cta.button.heading {
@@ -330,15 +343,15 @@
 }
 
 .pricing .wrapper .card {
-  @apply col-span-4 space-y-5 px-8 flex flex-col items-center border-[0.25px] rounded-3xl py-16 shadow-md;
+  @apply col-span-4 flex flex-col items-center space-y-5 rounded-3xl border-[0.25px] px-8 py-16 shadow-md;
 }
 
 .pricing .wrapper .best {
-  @apply col-span-4 relative;
+  @apply relative col-span-4;
 }
 
 .pricing .wrapper .best .offer {
-  @apply absolute z-0 inset-0 -top-12 bg-yellow-400 w-full py-4 rounded-3xl text-center;
+  @apply absolute inset-0 -top-12 z-0 w-full rounded-3xl bg-yellow-400 py-4 text-center;
 }
 
 .pricing .wrapper .best .offer .text {
@@ -346,7 +359,7 @@
 }
 
 .pricing .wrapper .card.best {
-  @apply bg-slate-50 relative z-10 border-2 border-yellow-400 shadow-none;
+  @apply relative z-10 border-2 border-yellow-400 bg-slate-50 shadow-none;
 }
 
 .pricing .wrapper .card .heading {
@@ -354,15 +367,15 @@
 }
 
 .pricing .wrapper .card .heading .main {
-  @apply font-bold text-slate-800 text-lg;
+  @apply text-lg font-bold text-slate-800;
 }
 
 .pricing .wrapper .card .heading .icon {
-  @apply w-14 h-14 mt-2 mb-4;
+  @apply mt-2 mb-4 h-14 w-14;
 }
 
 .pricing .wrapper .card .heading .icon img {
-  @apply w-full h-full;
+  @apply h-full w-full;
 }
 
 .pricing .wrapper .card .module {
@@ -370,7 +383,7 @@
 }
 
 .pricing .wrapper .card .module .heading-card .main {
-  @apply font-semibold text-slate-800 text-sm mb-3;
+  @apply mb-3 text-sm font-semibold text-slate-800;
 }
 
 .pricing .wrapper .card .module .list {
@@ -382,16 +395,24 @@
 }
 
 .pricing .wrapper .card .module .list .item .icon img {
-  @apply w-[18px] h-[18px];
+  @apply h-[18px] w-[18px];
+}
+
+.pricing .wrapper .card .module .note {
+  @apply py-4 text-center;
+}
+
+.pricing .wrapper .card .module .price {
+  @apply pb-6 text-center text-2xl font-bold text-slate-800;
 }
 
 .pricing .wrapper .card .module .nb {
-  @apply text-xs italic text-center;
+  @apply text-center text-xs italic;
 }
 
 /* FAQ */
 .faq {
-  @apply py-24 container mx-auto;
+  @apply container mx-auto pt-8 pb-24;
 }
 
 .faq .accordion {
@@ -403,11 +424,11 @@
 }
 
 .faq .accordion .wrapper .item {
-  @apply grid grid-cols-12 gap-y-4 py-6 border-b-[0.25px] border-slate-300 place-items-center;
+  @apply grid grid-cols-12 place-items-center gap-y-4 border-b-[0.25px] border-slate-300 py-6;
 }
 
 .faq .accordion .wrapper .item .text {
-  @apply text-slate-800 font-semibold col-span-10 place-self-start text-base leading-relaxed;
+  @apply col-span-10 place-self-start text-base font-semibold leading-relaxed text-slate-800;
 }
 
 .faq .accordion .wrapper .item .icon {
@@ -415,7 +436,7 @@
 }
 
 .faq .accordion .wrapper .item .icon.hide {
-  @apply transform rotate-180;
+  @apply rotate-180 transform;
 }
 
 .faq .accordion .wrapper .item .content {
@@ -424,19 +445,19 @@
 
 /* Footer */
 .footer {
-  @apply container mx-auto py-24 grid grid-cols-12 gap-x-8;
+  @apply container mx-auto grid grid-cols-12 gap-x-8 py-8;
 }
 
 .footer .company {
-  @apply mb-12 flex flex-col items-center space-y-4 col-start-3 col-end-11;
+  @apply col-start-3 col-end-11 mb-12 flex flex-col items-center space-y-4;
 }
 
 .footer .company .logo {
-  @apply w-20 h-20 mb-2;
+  @apply mb-2 h-20 w-20;
 }
 
 .footer .company .name {
-  @apply font-extrabold text-lg text-slate-800 uppercase;
+  @apply text-lg font-extrabold uppercase text-slate-800;
 }
 
 .footer .company .desc {
@@ -444,7 +465,7 @@
 }
 
 .footer .menu {
-  @apply mb-12 col-start-3 col-end-11 flex items-center justify-between;
+  @apply col-start-3 col-end-11 mb-12 flex items-center justify-between;
 }
 
 .footer .menu .item {
@@ -452,7 +473,7 @@
 }
 
 .footer .socmed {
-  @apply mb-8 col-start-3 col-end-11 flex items-center justify-center space-x-8;
+  @apply col-start-3 col-end-11 mb-8 flex items-center justify-center space-x-8;
 }
 
 .footer .copyright {

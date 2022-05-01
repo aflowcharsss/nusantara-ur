@@ -1,6 +1,6 @@
-<svg width="449" height="512" viewBox="0 0 449 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="65" cy="128" r="46.5" stroke="#0F172A" stroke-opacity="0.04" stroke-width="3"/>
-<circle cx="65" cy="128" r="94.5" stroke="#0F172A" stroke-opacity="0.04" stroke-width="3"/>
-<circle cx="65" cy="128" r="190.5" stroke="#0F172A" stroke-opacity="0.04" stroke-width="3"/>
-<circle cx="65" cy="128" r="382.5" stroke="#0F172A" stroke-opacity="0.04" stroke-width="3"/>
+<svg width="768" height="768" viewBox="0 0 768 768" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="384" cy="384" r="47" stroke="#0F172A" stroke-opacity="0.04" stroke-width="2"/>
+<circle cx="384" cy="384" r="95" stroke="#0F172A" stroke-opacity="0.04" stroke-width="2"/>
+<circle cx="384" cy="384" r="191" stroke="#0F172A" stroke-opacity="0.04" stroke-width="2"/>
+<circle cx="384" cy="384" r="383" stroke="#0F172A" stroke-opacity="0.04" stroke-width="2"/>
 </svg>

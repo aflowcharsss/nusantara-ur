@@ -88,7 +88,7 @@
 }
 
 .header .pattern {
-  @apply absolute top-0 left-0 h-[20rem] w-[20rem] opacity-75;
+  @apply absolute -top-24 -left-24 h-[20rem] w-[20rem] scale-150 transform opacity-100;
 }
 
 /* Header - Menu */
@@ -445,7 +445,11 @@
 
 /* Contact Us */
 .contact {
-  @apply container mx-auto pt-24 pb-32;
+  @apply relative  pt-24 pb-32;
+}
+
+.contact .form {
+  @apply container relative z-10 mx-auto;
 }
 
 .contact .form .wrapper {
@@ -476,39 +480,51 @@
   @apply w-full cursor-pointer;
 }
 
+.contact .pattern {
+  @apply absolute top-10 right-0 h-[32rem] w-[32rem] translate-y-1/2 opacity-100;
+}
+
 /* Footer */
 .footer {
+  @apply relative;
+}
+
+.footer .comp.blurred.left {
+  @apply absolute top-24 -left-24;
+}
+
+.footer .wrapper {
   @apply container mx-auto grid grid-cols-12 gap-x-8 py-8;
 }
 
-.footer .company {
+.footer .wrapper .company {
   @apply col-start-3 col-end-11 mb-12 flex flex-col items-center space-y-4;
 }
 
-.footer .company .logo {
+.footer .wrapper .company .logo {
   @apply mb-2 h-20 w-20;
 }
 
-.footer .company .name {
+.footer .wrapper .company .name {
   @apply text-lg font-extrabold uppercase text-slate-800;
 }
 
-.footer .company .desc {
+.footer .wrapper .company .desc {
   @apply text-center;
 }
 
-.footer .menu {
+.footer .wrapper .menu {
   @apply col-start-3 col-end-11 mb-12 flex items-center justify-between;
 }
 
-.footer .menu .item {
+.footer .wrapper .menu .item {
   @apply font-semibold text-slate-800;
 }
 
-.footer .socmed {
+.footer .wrapper .socmed {
   @apply col-start-3 col-end-11 mb-8 flex items-center justify-center space-x-8;
 }
 
-.footer .copyright {
+.footer .wrapper .copyright {
   @apply col-start-3 col-end-11 text-center;
 }

@@ -445,7 +445,7 @@
 
 /* Contact Us */
 .contact {
-  @apply container mx-auto pt-8 pb-16;
+  @apply container mx-auto pt-24 pb-32;
 }
 
 .contact .form .wrapper {

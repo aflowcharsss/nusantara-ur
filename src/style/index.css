@@ -443,6 +443,39 @@
   @apply col-span-11;
 }
 
+/* Contact Us */
+.contact {
+  @apply container mx-auto py-16;
+}
+
+.contact .form .wrapper {
+  @apply flex flex-col items-stretch;
+}
+
+.contact .form .wrapper .label {
+  @apply pb-2 font-semibold;
+}
+
+.contact .form .wrapper .input {
+  @apply mb-4 rounded-lg border-[0.25px] border-slate-200 bg-white py-3 px-6 outline-none;
+}
+
+.contact .form .wrapper .message {
+  @apply mb-6 h-32 rounded-lg border-[0.25px] border-slate-200 bg-white py-3 px-6 outline-none;
+}
+
+.contact .form .wrapper.captcha .image {
+  @apply mb-8 h-auto w-40;
+}
+
+.contact .form .wrapper.captcha .image img {
+  @apply h-full w-full rounded-lg;
+}
+
+.contact .form .submit {
+  @apply w-full cursor-pointer;
+}
+
 /* Footer */
 .footer {
   @apply container mx-auto grid grid-cols-12 gap-x-8 py-8;

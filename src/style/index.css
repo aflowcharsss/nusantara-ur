@@ -59,11 +59,15 @@
 }
 
 .comp.heading {
-  @apply mb-8 text-center;
+  @apply mb-4 flex flex-col items-center text-center xs:mb-8;
 }
 
 .comp.heading .content {
-  @apply mb-2 text-lg font-extrabold text-slate-800 lg:text-2xl;
+  @apply mb-2 text-base font-extrabold text-slate-800 xs:text-lg lg:text-2xl;
+}
+
+.comp.heading .description {
+  @apply w-4/5 text-sm;
 }
 
 /* Header */
@@ -80,7 +84,11 @@
 }
 
 .header .navigation .logo img {
-  @apply h-10 w-10;
+  @apply h-8 w-8;
+}
+
+.header .navigation .burger .icon {
+  @apply h-6 w-6;
 }
 
 .header .navigation .menu {
@@ -123,23 +131,27 @@
 }
 
 .hero .heading .name {
-  @apply mb-4 rounded-full bg-gradient-to-tr from-slate-100 to-slate-50 px-4 py-2 text-[10px] font-bold uppercase tracking-wider text-yellow-500 shadow-sm sm:text-sm;
+  @apply mb-4 rounded-full bg-gradient-to-tr from-slate-100 to-slate-50 px-4  py-1 text-[10px] font-bold uppercase tracking-wider text-yellow-500 shadow-sm xs:py-2 sm:text-sm;
 }
 
 .hero .heading .main {
-  @apply relative mb-10 w-9/12 text-center;
+  @apply relative mb-8 w-9/12 text-center xs:mb-10;
 }
 
 .hero .heading .main .text {
-  @apply relative z-10 text-xl font-extrabold leading-normal tracking-wide  text-slate-800 sm:text-4xl;
+  @apply relative z-10 text-2xl font-extrabold leading-normal tracking-wide text-slate-800  sm:text-4xl sm:leading-relaxed;
 }
 
-.hero .heading .main .text span {
+.hero .heading .main .text .bussiness {
   @apply italic text-yellow-500;
 }
 
-.hero .heading .main .underline {
-  @apply grad absolute top-5 left-1 z-0 h-1 w-16 bg-gradient-to-tr sm:top-10 sm:left-16 sm:w-28;
+.hero .heading .main .text .solution {
+  @apply relative;
+}
+
+.hero .heading .main .text .solution .underline {
+  @apply grad absolute bottom-0 left-0 z-0 h-1 w-full bg-gradient-to-tr xs:h-1;
 }
 
 .hero .heading .cta {
@@ -165,11 +177,11 @@
 
 /* Benefit */
 .benefit {
-  @apply relative py-16;
+  @apply relative py-16 px-4;
 }
 
 .benefit .b-feature {
-  @apply container mx-auto grid grid-cols-3 gap-x-8;
+  @apply container mx-auto grid grid-cols-1 gap-x-8 xs:grid-cols-3;
 }
 
 .benefit .b-feature .card {
@@ -177,11 +189,11 @@
 }
 
 .benefit .b-feature .card .icon {
-  @apply mb-8 rounded-2xl border-[0.25px] bg-slate-50 p-6 shadow-md transition-all duration-300 ease-out hover:cursor-pointer hover:border-transparent hover:bg-yellow-300 hover:shadow-none hover:transition-all hover:duration-500 hover:ease-in;
+  @apply mb-4 rounded-2xl border-[0.25px] bg-slate-50 p-4 shadow-md transition-all duration-300 ease-out hover:cursor-pointer hover:border-transparent hover:bg-yellow-300 hover:shadow-none hover:transition-all hover:duration-500 hover:ease-in xs:mb-8 xs:p-6;
 }
 
 .benefit .b-feature .card .icon .image {
-  @apply h-12 w-12;
+  @apply h-10 w-10 xs:h-12 xs:w-12;
 }
 
 .benefit .b-feature .card .text {
@@ -189,7 +201,7 @@
 }
 
 .benefit .b-feature .card .text .title {
-  @apply pb-2 text-lg font-extrabold text-slate-800;
+  @apply pb-2 text-base font-extrabold text-slate-800 sm:text-lg;
 }
 
 /* Introduction */
@@ -202,7 +214,7 @@
 }
 
 .intro .cta .button {
-  @apply w-40 text-center;
+  @apply text-center xs:w-40;
 }
 
 .intro .product {
@@ -210,12 +222,12 @@
 }
 
 .intro .product .wrapper {
-  @apply container mx-auto grid grid-cols-12 gap-x-8;
+  @apply container mx-auto grid grid-cols-12 gap-x-0 md:gap-x-8;
 }
 
 /* Introduction - Testimony */
 .intro .product .wrapper .testimony {
-  @apply col-span-5 py-16;
+  @apply hidden py-16 md:col-span-5;
 }
 
 .intro .product .wrapper .testimony .image {
@@ -236,12 +248,12 @@
 
 /* Introduction - Divider */
 .intro .product .wrapper .divider {
-  @apply col-span-1 h-full w-[0.25px] justify-self-center bg-slate-200;
+  @apply hidden h-full w-[0.25px] justify-self-center bg-slate-200 md:col-span-1;
 }
 
 /* Introduction - Content */
 .intro .product .wrapper .content {
-  @apply col-span-6 space-y-8 py-16;
+  @apply col-span-12 space-y-8 px-3 py-16 md:col-span-6;
 }
 
 .intro .product .wrapper .content .description .heading {
@@ -253,7 +265,7 @@
 }
 
 .intro .product .wrapper .content .type .wrapper {
-  @apply grid grid-cols-12 gap-x-8;
+  @apply grid grid-flow-col grid-cols-12 gap-x-0 overflow-x-auto md:gap-x-8;
 }
 
 .intro .product .wrapper .content .type .wrapper .card {
@@ -273,7 +285,7 @@
 }
 
 .intro .product .wrapper .content .feature-product .wrapper {
-  @apply mb-12 grid grid-cols-12 gap-8;
+  @apply mb-12 grid grid-cols-12 gap-8 overflow-x-auto md:gap-8;
 }
 
 .intro .product .wrapper .content .feature-product .wrapper .card {

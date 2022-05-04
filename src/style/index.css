@@ -310,11 +310,11 @@
 }
 
 .feature .wrapper {
-  @apply container mx-auto grid grid-cols-12 place-items-center gap-x-8;
+  @apply container mx-auto grid grid-cols-12 place-items-center gap-x-0 gap-y-8 px-4 md:gap-x-8 md:px-0;
 }
 
 .feature .wrapper .menu {
-  @apply col-span-3 space-y-4;
+  @apply col-span-3 hidden space-y-4 md:block;
 }
 
 .feature .wrapper .menu .list {
@@ -326,19 +326,19 @@
 }
 
 .feature .wrapper .image {
-  @apply col-span-5;
+  @apply col-span-12 md:col-span-5;
 }
 
 .feature .wrapper .image .photo {
-  @apply h-auto w-80;
+  @apply h-auto w-64 md:h-auto md:w-80;
 }
 
 .feature .wrapper .description {
-  @apply col-span-4;
+  @apply col-span-12 md:col-span-4;
 }
 
 .feature .wrapper .description .heading {
-  @apply mb-4 text-base font-bold text-slate-800;
+  @apply mb-2 text-base font-bold text-slate-800 md:mb-4;
 }
 
 /* Pricing */

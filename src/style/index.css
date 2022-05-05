@@ -59,11 +59,11 @@
 }
 
 .comp.heading {
-  @apply mb-4 flex flex-col items-center text-center xs:mb-8;
+  @apply mb-4 flex flex-col items-center text-center sm:mb-8;
 }
 
 .comp.heading .content {
-  @apply mb-2 text-base font-extrabold text-slate-800 xs:text-lg lg:text-2xl;
+  @apply mb-2 text-base font-extrabold text-slate-800 sm:text-lg lg:text-2xl;
 }
 
 .comp.heading .description {
@@ -131,11 +131,11 @@
 }
 
 .hero .heading .name {
-  @apply mb-4 rounded-full bg-gradient-to-tr from-slate-100 to-slate-50 px-4  py-1 text-[10px] font-bold uppercase tracking-wider text-yellow-500 shadow-sm xs:py-2 sm:text-sm;
+  @apply mb-4 rounded-full bg-gradient-to-tr from-slate-100 to-slate-50 px-4  py-1 text-[10px] font-bold uppercase tracking-wider text-yellow-500 shadow-sm sm:py-2 sm:text-sm;
 }
 
 .hero .heading .main {
-  @apply relative mb-8 w-9/12 text-center xs:mb-10;
+  @apply relative mb-8 w-9/12 text-center sm:mb-10;
 }
 
 .hero .heading .main .text {
@@ -151,7 +151,7 @@
 }
 
 .hero .heading .main .text .solution .underline {
-  @apply grad absolute bottom-0 left-0 z-0 h-1 w-full bg-gradient-to-tr xs:h-1;
+  @apply grad absolute bottom-0 left-0 z-0 h-1 w-full bg-gradient-to-tr sm:h-1;
 }
 
 .hero .heading .cta {
@@ -181,7 +181,7 @@
 }
 
 .benefit .b-feature {
-  @apply container mx-auto grid grid-cols-1 gap-x-8 xs:grid-cols-3;
+  @apply container mx-auto grid grid-cols-1 gap-x-8 sm:grid-cols-3;
 }
 
 .benefit .b-feature .card {
@@ -189,11 +189,11 @@
 }
 
 .benefit .b-feature .card .icon {
-  @apply mb-4 rounded-2xl border-[0.25px] bg-slate-50 p-4 shadow-md transition-all duration-300 ease-out hover:cursor-pointer hover:border-transparent hover:bg-yellow-300 hover:shadow-none hover:transition-all hover:duration-500 hover:ease-in xs:mb-8 xs:p-6;
+  @apply mb-4 rounded-2xl border-[0.25px] bg-slate-50 p-4 shadow-md transition-all duration-300 ease-out hover:cursor-pointer hover:border-transparent hover:bg-yellow-300 hover:shadow-none hover:transition-all hover:duration-500 hover:ease-in sm:mb-8 sm:p-6;
 }
 
 .benefit .b-feature .card .icon .image {
-  @apply h-10 w-10 xs:h-12 xs:w-12;
+  @apply h-10 w-10 sm:h-12 sm:w-12;
 }
 
 .benefit .b-feature .card .text {
@@ -214,7 +214,7 @@
 }
 
 .intro .cta .button {
-  @apply text-center xs:w-40;
+  @apply text-center sm:w-40;
 }
 
 .intro .product {
@@ -343,31 +343,31 @@
 
 /* Pricing */
 .pricing {
-  @apply relative pt-32 pb-8;
+  @apply relative pb-8 md:pt-32;
 }
 
 .pricing .cta {
-  @apply relative z-20 mb-4 flex items-center justify-center space-x-4;
+  @apply relative z-20 flex items-center justify-center space-x-4 md:mb-4;
 }
 
 .pricing .cta .comp.cta.button.heading {
-  @apply w-40;
+  @apply md:w-40;
 }
 
 .pricing .wrapper {
-  @apply container relative z-20 mx-auto grid grid-cols-12 gap-x-8 py-20;
+  @apply container relative z-20 mx-auto grid grid-cols-12 gap-x-0 gap-y-8 px-4 py-20 md:gap-x-8 md:px-0;
 }
 
 .pricing .wrapper .card {
-  @apply col-span-4 flex flex-col items-center space-y-5 rounded-3xl border-[0.25px] px-8 py-16 shadow-md;
+  @apply col-span-12 flex flex-col items-center space-y-5 rounded-3xl border-[0.25px] px-8 py-16 shadow-md md:col-span-4;
 }
 
 .pricing .wrapper .best {
-  @apply relative col-span-4;
+  @apply relative col-span-12 md:col-span-4;
 }
 
 .pricing .wrapper .best .offer {
-  @apply absolute inset-0 -top-12 z-0 w-full rounded-3xl bg-yellow-400 py-4 text-center;
+  @apply inset-0 -top-12 z-0 hidden w-full rounded-3xl bg-yellow-400 py-4 text-center md:absolute;
 }
 
 .pricing .wrapper .best .offer .text {
@@ -461,11 +461,11 @@
 
 /* Contact Us */
 .contact {
-  @apply relative  pt-24 pb-32;
+  @apply relative pt-24 pb-32;
 }
 
 .contact .form {
-  @apply container relative z-10 mx-auto;
+  @apply container relative z-10 mx-auto px-4 sm:px-0;
 }
 
 .contact .form .wrapper {
@@ -506,7 +506,7 @@
 }
 
 .footer .comp.blurred.left {
-  @apply absolute top-24 -left-24;
+  @apply top-24 -left-24 hidden md:absolute;
 }
 
 .footer .wrapper {
@@ -514,15 +514,15 @@
 }
 
 .footer .wrapper .company {
-  @apply col-start-3 col-end-11 mb-12 flex flex-col items-center space-y-4;
+  @apply col-start-1 col-end-13 mb-12 flex flex-col items-center space-y-4 px-4 md:col-start-3 md:col-end-11;
 }
 
 .footer .wrapper .company .logo {
-  @apply mb-2 h-20 w-20;
+  @apply mb-2 h-16 w-16 md:h-20 md:w-20;
 }
 
 .footer .wrapper .company .name {
-  @apply text-lg font-extrabold uppercase text-slate-800;
+  @apply text-center text-base font-extrabold uppercase text-slate-800 md:text-lg;
 }
 
 .footer .wrapper .company .desc {
@@ -530,7 +530,7 @@
 }
 
 .footer .wrapper .menu {
-  @apply col-start-3 col-end-11 mb-12 flex items-center justify-between;
+  @apply col-start-1 col-end-13 mb-12 hidden flex-wrap items-center justify-between sm:flex md:col-start-3 md:col-end-11;
 }
 
 .footer .wrapper .menu .item {
@@ -538,9 +538,9 @@
 }
 
 .footer .wrapper .socmed {
-  @apply col-start-3 col-end-11 mb-8 flex items-center justify-center space-x-8;
+  @apply col-start-1 col-end-13 mb-8 flex items-center justify-center space-x-8 md:col-start-3 md:col-end-11;
 }
 
 .footer .wrapper .copyright {
-  @apply col-start-3 col-end-11 text-center;
+  @apply col-start-1 col-end-13 text-center md:col-start-3 md:col-end-11;
 }

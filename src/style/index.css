@@ -8,7 +8,7 @@
 
 /* Base */
 .nusantara {
-  @apply min-h-screen bg-slate-50 font-inter text-sm tracking-wide text-slate-600;
+  @apply bg-slate-50 font-inter text-sm tracking-wide text-slate-600;
 }
 
 .grad {
@@ -72,31 +72,41 @@
 
 /* Header */
 .header {
-  @apply relative px-4 text-sm font-semibold text-slate-800 sm:px-0;
+  @apply relative px-4 text-sm font-semibold text-slate-800 sm:px-8;
 }
 
 .header .navigation {
-  @apply container relative mx-auto flex grid-cols-12 place-items-center items-center justify-between gap-x-8 py-4 md:grid;
+  @apply container relative mx-auto grid grid-cols-12 items-center py-4 
+  sm:py-8 
+  md:grid-cols-12 md:gap-x-8;
 }
 
 .header .navigation .logo {
-  @apply col-span-3 place-self-start;
+  @apply col-span-6 place-self-start lg:col-span-3;
 }
 
 .header .navigation .logo img {
-  @apply h-8 w-8;
+  @apply h-10 w-10;
+}
+
+.header .navigation .burger {
+  @apply col-span-6 justify-self-end;
 }
 
 .header .navigation .burger .icon {
-  @apply h-6 w-6;
+  @apply h-8 w-8;
 }
 
-.header .navigation .menu {
-  @apply col-span-6;
+.header .navigation .wrapper {
+  @apply hidden;
 }
 
-.header .navigation .login {
-  @apply col-span-3 place-self-end self-center;
+.header .navigation .wrapper .menu {
+  @apply lg:col-span-3;
+}
+
+.header .navigation .wrapper .login {
+  @apply lg:col-span-3 lg:place-self-end lg:self-center;
 }
 
 .header .pattern {
@@ -104,11 +114,11 @@
 }
 
 /* Header - Menu */
-.header .navigation .menu {
-  @apply hidden items-center space-x-12 sm:flex;
+.header .navigation .wrapper .menu {
+  @apply hidden items-center space-x-12 md:flex;
 }
 
-.header .navigation .menu .item .link.active {
+.header .navigation .wrapper .menu .item .link.active {
   @apply text-yellow-500;
 }
 
@@ -118,7 +128,7 @@
 }
 
 .hero .wrapper {
-  @apply relative z-20 flex flex-col items-center justify-center space-y-8 sm:min-h-screen sm:space-y-16;
+  @apply relative z-20 flex flex-col items-center justify-center space-y-8 lg:min-h-screen lg:space-y-16;
 }
 
 .hero .map {
@@ -181,7 +191,8 @@
 }
 
 .benefit .b-feature {
-  @apply container mx-auto grid grid-cols-1 gap-x-8 sm:grid-cols-3;
+  @apply container mx-auto grid grid-cols-1 gap-x-8 px-4 
+  sm:grid-cols-2 md:px-8;
 }
 
 .benefit .b-feature .card {
@@ -189,7 +200,9 @@
 }
 
 .benefit .b-feature .card .icon {
-  @apply mb-4 rounded-2xl border-[0.25px] bg-slate-50 p-4 shadow-md transition-all duration-300 ease-out hover:cursor-pointer hover:border-transparent hover:bg-yellow-300 hover:shadow-none hover:transition-all hover:duration-500 hover:ease-in sm:mb-8 sm:p-6;
+  @apply mb-4 rounded-2xl border-[0.25px] bg-slate-50 p-4 shadow-md transition-all duration-300 ease-out 
+  hover:cursor-pointer hover:border-transparent hover:bg-yellow-300 hover:shadow-none 
+  hover:transition-all hover:duration-500 hover:ease-in sm:mb-8 sm:p-6;
 }
 
 .benefit .b-feature .card .icon .image {
@@ -209,12 +222,12 @@
   @apply py-8;
 }
 
-.intro .cta {
+.intro .cta-intro {
   @apply mb-4 flex items-center justify-center space-x-4;
 }
 
 .intro .cta .button {
-  @apply text-center sm:w-40;
+  @apply flex items-center justify-center space-x-4 text-center sm:w-40;
 }
 
 .intro .product {
@@ -222,16 +235,17 @@
 }
 
 .intro .product .wrapper {
-  @apply container mx-auto grid grid-cols-12 gap-x-0 md:gap-x-8;
+  @apply container mx-auto grid grid-cols-12 gap-x-0 
+  md:gap-x-8 md:px-8;
 }
 
 /* Introduction - Testimony */
 .intro .product .wrapper .testimony {
-  @apply hidden py-16 md:col-span-5;
+  @apply hidden py-8 md:col-span-5 md:block lg:col-span-5;
 }
 
 .intro .product .wrapper .testimony .image {
-  @apply h-96 w-full;
+  @apply w-full md:h-72 lg:h-96;
 }
 
 .intro .product .wrapper .testimony .photo {
@@ -248,12 +262,16 @@
 
 /* Introduction - Divider */
 .intro .product .wrapper .divider {
-  @apply hidden h-full w-[0.25px] justify-self-center bg-slate-200 md:col-span-1;
+  @apply hidden h-full w-[0.25px] bg-slate-200 md:col-span-1 lg:block lg:justify-self-center;
 }
 
 /* Introduction - Content */
 .intro .product .wrapper .content {
-  @apply col-span-12 space-y-8 px-3 py-8 sm:py-16 md:col-span-6;
+  @apply col-span-12 px-3 py-8 md:col-span-7 md:px-0 lg:col-span-6;
+}
+
+.intro .product .wrapper .content > div:not(:last-child) {
+  @apply mb-8;
 }
 
 .intro .product .wrapper .content .description .heading {
@@ -264,19 +282,19 @@
   @apply mb-4 text-base font-semibold text-slate-800;
 }
 
-.intro .product .wrapper .content .type .wrapper {
+.intro .product .wrapper .content .type .wrapper-type {
   @apply grid grid-flow-col grid-cols-12 gap-x-0 overflow-x-auto md:gap-x-8;
 }
 
-.intro .product .wrapper .content .type .wrapper .card {
+.intro .product .wrapper .content .type .wrapper-type .card {
   @apply col-span-4 flex flex-col items-center space-y-2;
 }
 
-.intro .product .wrapper .content .type .wrapper .card .icon img {
+.intro .product .wrapper .content .type .wrapper-type .card .icon img {
   @apply h-10 w-10;
 }
 
-.intro .product .wrapper .content .type .wrapper .card .text {
+.intro .product .wrapper .content .type .wrapper-type .card .text {
   @apply text-slate-800;
 }
 
@@ -284,23 +302,30 @@
   @apply mb-4 text-base font-semibold text-slate-800;
 }
 
-.intro .product .wrapper .content .feature-product .wrapper {
-  @apply mb-12 grid grid-cols-12 gap-8 overflow-x-auto md:gap-8;
+.intro .product .wrapper .content .feature-product .wrapper-feature {
+  @apply mb-12 grid grid-cols-12 gap-8 overflow-x-auto;
 }
 
-.intro .product .wrapper .content .feature-product .wrapper .card {
+.intro .product .wrapper .content .feature-product .wrapper-feature .card {
   @apply col-span-4 flex flex-col items-center justify-center space-y-2;
 }
 
-.intro .product .wrapper .content .feature-product .wrapper .card .icon {
+.intro
+  .product
+  .wrapper
+  .content
+  .feature-product
+  .wrapper-feature
+  .card
+  .icon {
   @apply h-9 w-9;
 }
 
-.intro .product .wrapper .content .feature-product .wrapper .card img {
+.intro .product .wrapper .content .feature-product .wrapper-feature .card img {
   @apply h-full w-full object-cover;
 }
 
-.intro .product .wrapper .content .feature-product .wrapper .desc {
+.intro .product .wrapper .content .feature-product .wrapper-feature .desc {
   @apply text-center text-xs;
 }
 
@@ -310,11 +335,12 @@
 }
 
 .feature .wrapper {
-  @apply container mx-auto grid grid-cols-12 place-items-center gap-x-0 gap-y-8 px-4 md:gap-x-8 md:px-0;
+  @apply container mx-auto grid grid-cols-12 place-items-center gap-x-0 gap-y-8 px-4 
+  md:gap-x-8 md:px-8;
 }
 
 .feature .wrapper .menu {
-  @apply col-span-3 hidden space-y-4 md:block;
+  @apply col-span-3 hidden space-y-4 lg:block;
 }
 
 .feature .wrapper .menu .list {
@@ -326,7 +352,7 @@
 }
 
 .feature .wrapper .image {
-  @apply col-span-12 md:col-span-5;
+  @apply col-span-12 md:col-span-6 lg:col-span-5;
 }
 
 .feature .wrapper .image .photo {
@@ -334,7 +360,7 @@
 }
 
 .feature .wrapper .description {
-  @apply col-span-12 md:col-span-4;
+  @apply col-span-12 md:col-span-6 lg:col-span-4;
 }
 
 .feature .wrapper .description .heading {
@@ -343,11 +369,11 @@
 
 /* Pricing */
 .pricing {
-  @apply relative py-16 md:pt-32;
+  @apply relative py-16 sm:pt-32;
 }
 
 .pricing .cta {
-  @apply relative z-20 flex items-center justify-center space-x-4 md:mb-4;
+  @apply relative z-20 flex items-center justify-center space-x-4 sm:mb-8;
 }
 
 .pricing .cta .comp.cta.button.heading {
@@ -355,19 +381,22 @@
 }
 
 .pricing .wrapper {
-  @apply container relative z-20 mx-auto grid grid-cols-12 gap-x-0 gap-y-8 px-4 py-8 sm:py-20 md:gap-x-8 md:px-0;
+  @apply container relative z-20 mx-auto grid grid-cols-12 gap-x-0 gap-y-8 px-4 py-8 
+  sm:gap-x-8 sm:py-20 md:py-4 md:px-8;
 }
 
 .pricing .wrapper .card {
-  @apply col-span-12 flex flex-col items-center space-y-5 rounded-3xl border-[0.25px] px-8 py-16 shadow-md md:col-span-4;
+  @apply col-span-12 flex flex-col items-center space-y-5 rounded-3xl border-[0.25px] px-8 py-16 shadow-md 
+  sm:col-span-6
+  lg:col-span-4;
 }
 
 .pricing .wrapper .best {
-  @apply relative col-span-12 md:col-span-4;
+  @apply relative col-span-12 sm:col-span-6 lg:col-span-4;
 }
 
 .pricing .wrapper .best .offer {
-  @apply inset-0 -top-12 z-0 hidden w-full rounded-3xl bg-yellow-400 py-4 text-center md:absolute;
+  @apply inset-0 -top-12 z-0 hidden w-full rounded-3xl bg-yellow-400 py-4 text-center sm:absolute sm:block;
 }
 
 .pricing .wrapper .best .offer .text {
@@ -461,11 +490,11 @@
 
 /* Contact Us */
 .contact {
-  @apply relative pt-24 pb-32;
+  @apply relative pt-16 pb-24 sm:pt-24 sm:pb-32;
 }
 
 .contact .form {
-  @apply container relative z-10 mx-auto px-4 sm:px-0;
+  @apply container relative z-10 mx-auto px-4 sm:px-8;
 }
 
 .contact .form .wrapper {
@@ -502,7 +531,7 @@
 
 /* Footer */
 .footer {
-  @apply relative text-xs;
+  @apply relative;
 }
 
 .footer .comp.blurred.left {
@@ -533,12 +562,13 @@
 }
 
 .footer .wrapper .company .desc {
-  @apply text-center;
+  @apply px-4 text-center;
 }
 
 .footer .wrapper .menu {
-  @apply col-start-1 col-end-13 mb-12 hidden flex-wrap 
-  items-center justify-between sm:flex md:col-start-3 md:col-end-11;
+  @apply col-start-1 col-end-13 mb-12 hidden 
+  sm:flex sm:items-center sm:justify-around 
+  md:col-start-3 md:col-end-11;
 }
 
 .footer .wrapper .menu .item {

@@ -253,7 +253,7 @@
 
 /* Introduction - Content */
 .intro .product .wrapper .content {
-  @apply col-span-12 space-y-8 px-3 py-16 md:col-span-6;
+  @apply col-span-12 space-y-8 px-3 py-8 sm:py-16 md:col-span-6;
 }
 
 .intro .product .wrapper .content .description .heading {
@@ -343,7 +343,7 @@
 
 /* Pricing */
 .pricing {
-  @apply relative pb-8 md:pt-32;
+  @apply relative py-16 md:pt-32;
 }
 
 .pricing .cta {
@@ -355,7 +355,7 @@
 }
 
 .pricing .wrapper {
-  @apply container relative z-20 mx-auto grid grid-cols-12 gap-x-0 gap-y-8 px-4 py-20 md:gap-x-8 md:px-0;
+  @apply container relative z-20 mx-auto grid grid-cols-12 gap-x-0 gap-y-8 px-4 py-8 sm:py-20 md:gap-x-8 md:px-0;
 }
 
 .pricing .wrapper .card {
@@ -432,11 +432,11 @@
 }
 
 .faq .accordion {
-  @apply grid grid-cols-12 gap-x-8;
+  @apply grid grid-cols-12 gap-x-0 px-4 sm:gap-x-8;
 }
 
 .faq .accordion .wrapper {
-  @apply col-start-2 col-end-12 py-0;
+  @apply col-start-1 col-end-13 py-0 sm:col-start-2 sm:col-end-12;
 }
 
 .faq .accordion .wrapper .item {
@@ -502,7 +502,7 @@
 
 /* Footer */
 .footer {
-  @apply relative;
+  @apply relative text-xs;
 }
 
 .footer .comp.blurred.left {
@@ -510,19 +510,26 @@
 }
 
 .footer .wrapper {
-  @apply container mx-auto grid grid-cols-12 gap-x-8 py-8;
+  @apply container mx-auto grid grid-cols-12 gap-x-0 py-8 md:gap-x-8;
 }
 
 .footer .wrapper .company {
-  @apply col-start-1 col-end-13 mb-12 flex flex-col items-center space-y-4 px-4 md:col-start-3 md:col-end-11;
+  @apply col-start-1 col-end-13 mb-12 flex flex-col items-center space-y-4 
+  
+  sm:px-4 
+  
+  md:col-start-3 md:col-end-11;
 }
 
 .footer .wrapper .company .logo {
-  @apply mb-2 h-16 w-16 md:h-20 md:w-20;
+  @apply mb-2 h-16 w-16 
+  
+  md:h-20 md:w-20;
 }
 
 .footer .wrapper .company .name {
-  @apply text-center text-base font-extrabold uppercase text-slate-800 md:text-lg;
+  @apply text-center text-base font-extrabold 
+  uppercase text-slate-800 md:text-lg;
 }
 
 .footer .wrapper .company .desc {
@@ -530,7 +537,8 @@
 }
 
 .footer .wrapper .menu {
-  @apply col-start-1 col-end-13 mb-12 hidden flex-wrap items-center justify-between sm:flex md:col-start-3 md:col-end-11;
+  @apply col-start-1 col-end-13 mb-12 hidden flex-wrap 
+  items-center justify-between sm:flex md:col-start-3 md:col-end-11;
 }
 
 .footer .wrapper .menu .item {
@@ -538,9 +546,9 @@
 }
 
 .footer .wrapper .socmed {
-  @apply col-start-1 col-end-13 mb-8 flex items-center justify-center space-x-8 md:col-start-3 md:col-end-11;
+  @apply col-span-12 mb-8 flex items-center justify-center space-x-8 md:col-start-3 md:col-end-11;
 }
 
 .footer .wrapper .copyright {
-  @apply col-start-1 col-end-13 text-center md:col-start-3 md:col-end-11;
+  @apply col-span-12 text-center md:col-start-3 md:col-end-11;
 }

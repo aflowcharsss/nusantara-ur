@@ -8,7 +8,9 @@
 
 /* Base */
 .nusantara {
-  @apply bg-slate-50 font-inter text-sm tracking-wide text-slate-600 xl:text-base;
+  @apply bg-slate-50 font-inter text-sm tracking-wide text-slate-600 
+  
+  xl:text-base;
 }
 
 .grad {
@@ -151,6 +153,10 @@
 
 .hero .map {
   @apply absolute top-48 left-1/2 z-10 h-full w-full -translate-x-1/2 transform opacity-90;
+}
+
+.hero .map img {
+  @apply h-full w-full;
 }
 
 /* Hero - Heading */
